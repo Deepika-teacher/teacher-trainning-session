@@ -19,7 +19,7 @@ class Rope{
         if(this.rope.bodyA){
             var pointA=this.rope.bodyA.position;
             var pointB=this.rope.pointB;
-            line(pointA.x,pointA.y,pointB.x,pointB.y);
+            line(pointA.x,pointA.y-50,pointB.x,pointB.y);
         }
     }
 }

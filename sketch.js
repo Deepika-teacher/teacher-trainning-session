@@ -13,6 +13,10 @@ var boxArray=[];
 var boxX=[];
 var boxY=[];
 
+function preload(){
+  backgroundImg=loadImage("backgroundImg.png");
+}
+
 function setup() {
   createCanvas(1600,800);
   myEngine=Engine.create();
@@ -51,7 +55,7 @@ function setup() {
 }
 
 function draw() {
-  background(255,255,255); 
+  background(backgroundImg); 
   Engine.update(myEngine);
  
   ball.display();
