@@ -5,21 +5,21 @@ class Ball{
            density : 3,
            restitution : 0.8
         }
-        this.body=Bodies.circle(x,y,40,options);
-        this.radius=40;
+        this.body=Bodies.circle(x,y,50,options);
+        this.radius=50;
         World.add(myWorld,this.body);
     }
 
     display(){
-        var posX=this.body.position.x;
-        var posY=this.body.position.y;
-        var angle=this.body.angle;
-        posX=mouseX;
-        posY=mouseY;
+        var pos=this.body.position;
+        var ang=this.body.angle;
+
+        //pos.x=mouseX;
+        //pos.y=mouseY;
 
         push();
-        translate(posX,posY);
-        rotate(angle);
+        translate(pos.x,pos.y);
+        rotate(ang);
 
         fill("yellow");
         stroke("green");

@@ -9,23 +9,27 @@ class Box{
         this.width=100;
         this.height=100;
         World.add(myWorld,this.body);
+        this.image=loadImage("giftbox.jpg");
     }
 
     display(){
         var posX=this.body.position.x;
         var posY=this.body.position.y;
-        var angle=this.body.angle;
+        var ang=this.body.angle;
 
         push();
         translate(posX,posY);
-        rotate(angle);
-
-        fill("white");
-        stroke("green");
-        strokeWeight(5);
+        rotate(ang);
         
-        rectMode(CENTER);
-        rect(0,0,this.width,this.height);
+        //rectMode(CENTER);
+        //rect(0,0,this.width,this.height);
+
+        imageMode(CENTER);
+        image(this.image,0,0,100,100);
+        
+        if(this.body.speed>10){
+         tint(255,this.visibility);          
+        }
         pop();
     }
 }
